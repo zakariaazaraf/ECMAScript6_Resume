@@ -67,3 +67,15 @@ const [f1, , , f2, [t1, t2, [tt1, tt2]], ,dates] = fruits;
 
 console.log(`Fruits: ${f1}, ${f2}, ${t1}, ${tt2}, ${dates}`);
 
+
+// SWAPPING ARRAY
+
+let book = 'book',
+    table = 'table';
+
+console.log(`Book: ${book}, Table: ${table}`);
+
+[book, table] = [table, book];
+
+console.log(`Book: ${book}, Table: ${table}`);
+
