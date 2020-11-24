@@ -1,16 +1,61 @@
-// Declare user object 
+/*=========================================================
+=================== Destructing bojects ===================
+===========================================================*/
+
+
+/* // Declare user object 
 const user = {
     name: 'zakaria',
     gender: 'male',
     age: 22,
     city: 'chichaoua',
-    'country': 'morocco'
+    'country': 'morocco',
+    languages: {
+        html: '90%',
+        css: '80%',
+        js: '76%'
+    }
+
 }
 
-// destructe
+// Destructring
 
-const {name, gender, age, city, country} = user;
+//const {name, gender, age, city, country} = user;
 
-let phrase = `hello my name is: ${name} i'm a ${gender} gender, i'm ${age} yers old i live in ${city}, ${country}`;
+//({name, gender, age, city, country} = user) // IF THE VARIABLES WAS DECLARING BEFORE
 
-console.log(phrase);
+//const {name: n, gender: g, age: a, languages: {html, css, js} } = user;
+
+// GETTING JUST THE LANGS
+
+const {html, css, js} = user.languages;
+
+
+//let phrase = `hello my name is: ${n} i'm a ${g} gender, i'm ${a} yers old `;
+
+let langsPhrase = `languages progress ${html} ${css} ${js}`;
+
+console.log(langsPhrase); */
+
+
+
+/*=========================================================
+=================== Destructing Arrays ====================
+===========================================================*/
+
+// DESCLARING ARRAY
+const arr = ['meat', 'rice', 'chicken', 'fish', 'pizza', 'burgger'];
+
+// DESTRUCTING
+//let one = "one";
+
+const [one, two, three, four, five, six] = arr;
+
+// SKIPING ELEMENT
+const [one, , three, four, , six] = arr;
+
+//[one, two, three, four, five, six] = arr;
+
+
+console.log(`${one}, ${four}, ${three}`);
+
