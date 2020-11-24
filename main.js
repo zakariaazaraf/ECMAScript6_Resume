@@ -49,7 +49,7 @@ const arr = ['meat', 'rice', 'chicken', 'fish', 'pizza', 'burgger'];
 // DESTRUCTING
 //let one = "one";
 
-const [one, two, three, four, five, six] = arr;
+//const [one, two, three, four, five, six] = arr;
 
 // SKIPING ELEMENT
 const [one, , three, four, , six] = arr;
@@ -58,4 +58,12 @@ const [one, , three, four, , six] = arr;
 
 
 console.log(`${one}, ${four}, ${three}`);
+
+const fruits = ['banana', 'orange', 'apple', 'avovado', ['t1', 't2', ['tt1', 'tt2']],'blackberry', 'dates'];
+
+const [f1, , , f2, [t1, t2, [tt1, tt2]], ,dates] = fruits;
+
+//const [f1, two, ...others] = fruits;
+
+console.log(`Fruits: ${f1}, ${f2}, ${t1}, ${tt2}, ${dates}`);
 
