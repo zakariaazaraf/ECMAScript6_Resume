@@ -135,8 +135,97 @@ for(let item of all.arr){
 
 console.log(all.helloWorld('hamadda')); */
 
-import importDefault from './app.js';
+/* import importDefault from './app.js';
 
-console.log(importDefault);
+console.log(importDefault); */
 
 
+/*=========================================================
+================= Extend class from modules ================
+===========================================================*/
+
+import User from './classes.js';
+
+class Admin extends User {
+    constructor(name, email){
+        super(name, email); // CALL THE PARENT CONSTUCTOR
+    }
+}
+
+let admin = new Admin('zakaria', 'zakariaazarf@gmail.com');
+
+console.log(admin.getName());
+
+console.log(admin.getEmail());
+
+
+/*=========================================================
+================= Promeses, get my rempo ipa ================
+===========================================================*/
+
+
+/* let myRequest = new XMLHttpRequest();
+
+function getRepos(githubURL){
+
+    myRequest.onreadystatechange = function (){
+
+    if(this.readyState === 4 && this.status === 200){
+
+        //console.log(JSON.parse(this.responseText));
+        
+        console.log(JSON.parse(this.responseText)[24].name);
+
+    }
+
+    };
+
+
+    myRequest.open('GET', githubURL, true);
+
+
+    myRequest.send();
+
+}
+
+getRepos('https://api.github.com/users/zakariaazaraf/repos'); */
+
+
+const getRepoPromise = (githubURL) =>{
+
+    return new Promise((resolve, reject) => {
+
+    // Declare XMLHttpRequest
+    let myReq = new XMLHttpRequest();
+
+    myReq.onload = function(){
+
+        if(this.readyState === 4 && this.status === 200){
+
+            resolve(JSON.parse(this.responseText)[23].name);
+               
+        }else{
+
+            reject(Error(this.statusText));
+            
+        }
+
+    };
+
+    myReq.open('GET', githubURL, true);
+
+    myReq.send();
+
+    });
+
+};
+
+getRepoPromise('https://api.github.com/users/zakariaazaraf/repos').then(
+    (res) => {
+        let newElement = document.createElement('div');
+        let elementText = document.createTextNode(res);
+        newElement.appendChild(elementText);
+        document.body.appendChild(newElement);
+    },
+    (error) => console.log(error)
+);
