@@ -3,6 +3,8 @@
 ===========================================================*/
 
 
+
+
 /* // Declare user object 
 const user = {
     name: 'zakaria',
@@ -85,7 +87,7 @@ console.log(`Book: ${book}, Table: ${table}`);
 ================= Destructing mixed content ===============
 ===========================================================*/
 
-const user = {
+/* const user = {
     username: 'zakaria',
     age: 23,
     city: 'Chichaoua',
@@ -99,17 +101,36 @@ const user = {
 const {username, age, city, skills: {html, css, js: [one, two, three]}} = user;
 
 console.log(`i'm ${username} i have ${age}, and i live in ${city}`);
-console.log(`my skills are ${html} ${css}, and ${one} ${two} ${three}`);
+console.log(`my skills are ${html} ${css}, and ${one} ${two} ${three}`); */
 
 /*=========================================================
 =============== Destructing function params ===============
 ===========================================================*/
 
 
-showData = (user) => {
+/* showData = (user) => {
     return `i'm ${username} i have ${age}, and i live in ${city}
 my skills are ${html} ${css}, and ${one} ${two} ${three}
 This lines printed by function`;
 }
 
-console.log(showData({username, age, city, skills: {html, css, js: [one, two, three]}}))
+console.log(showData({username, age, city, skills: {html, css, js: [one, two, three]}})) */
+
+
+/*=========================================================
+====================== Import & Export ====================
+===========================================================*/
+
+import {username, myArr, helloWorld} from './app.js';
+
+console.log(username);
+
+console.log('Printing the array');
+
+for(let item of myArr){
+    console.log(item);
+}
+
+console.log(helloWorld('hamadda'));
+
+
