@@ -123,7 +123,7 @@ console.log(showData({username, age, city, skills: {html, css, js: [one, two, th
 
 //import {username, myArr, helloWorld} from './app.js';
 
-import * as all from './app.js'; // import all
+/* import * as all from './app.js'; // import all
 
 console.log(all.username); // use it like an object
 
@@ -133,6 +133,10 @@ for(let item of all.arr){
     console.log(item);
 }
 
-console.log(all.helloWorld('hamadda'));
+console.log(all.helloWorld('hamadda')); */
+
+import importDefault from './app.js';
+
+console.log(importDefault);
 
 

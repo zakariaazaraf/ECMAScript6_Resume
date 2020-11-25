@@ -12,3 +12,6 @@ export {
     helloWorld
 };
 
+let defaultOne = 'test the default module';
+
+export default defaultOne; // THIS IS THE DEFAULT MODULE, IT COULD BE ANYTHING
