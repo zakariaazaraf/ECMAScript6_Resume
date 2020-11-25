@@ -121,16 +121,18 @@ console.log(showData({username, age, city, skills: {html, css, js: [one, two, th
 ====================== Import & Export ====================
 ===========================================================*/
 
-import {username, myArr, helloWorld} from './app.js';
+//import {username, myArr, helloWorld} from './app.js';
 
-console.log(username);
+import * as all from './app.js'; // import all
+
+console.log(all.username); // use it like an object
 
 console.log('Printing the array');
 
-for(let item of myArr){
+for(let item of all.arr){
     console.log(item);
 }
 
-console.log(helloWorld('hamadda'));
+console.log(all.helloWorld('hamadda'));
 
 

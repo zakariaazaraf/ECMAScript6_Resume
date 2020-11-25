@@ -8,6 +8,7 @@ let helloWorld = name =>{
 
 export {
     username,
-    myArr,
+    myArr as arr,// export as alias
     helloWorld
 };
+
