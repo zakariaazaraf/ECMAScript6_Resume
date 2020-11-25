@@ -82,7 +82,7 @@ console.log(`Book: ${book}, Table: ${table}`);
 
 
 /*=========================================================
-================= Destructing mised content ===============
+================= Destructing mixed content ===============
 ===========================================================*/
 
 const user = {
@@ -100,3 +100,16 @@ const {username, age, city, skills: {html, css, js: [one, two, three]}} = user;
 
 console.log(`i'm ${username} i have ${age}, and i live in ${city}`);
 console.log(`my skills are ${html} ${css}, and ${one} ${two} ${three}`);
+
+/*=========================================================
+=============== Destructing function params ===============
+===========================================================*/
+
+
+showData = (user) => {
+    return `i'm ${username} i have ${age}, and i live in ${city}
+my skills are ${html} ${css}, and ${one} ${two} ${three}
+This lines printed by function`;
+}
+
+console.log(showData({username, age, city, skills: {html, css, js: [one, two, three]}}))
