@@ -43,7 +43,7 @@ console.log(langsPhrase); */
 =================== Destructing Arrays ====================
 ===========================================================*/
 
-// DESCLARING ARRAY
+/* // DESCLARING ARRAY
 const arr = ['meat', 'rice', 'chicken', 'fish', 'pizza', 'burgger'];
 
 // DESTRUCTING
@@ -78,4 +78,25 @@ console.log(`Book: ${book}, Table: ${table}`);
 [book, table] = [table, book];
 
 console.log(`Book: ${book}, Table: ${table}`);
+ */
 
+
+/*=========================================================
+================= Destructing mised content ===============
+===========================================================*/
+
+const user = {
+    username: 'zakaria',
+    age: 23,
+    city: 'Chichaoua',
+    skills: {
+        html: '90%',
+        css: '23%',
+        js: ['VueJs', 'ReactJs', 'AngularJs']
+    }
+}
+
+const {username, age, city, skills: {html, css, js: [one, two, three]}} = user;
+
+console.log(`i'm ${username} i have ${age}, and i live in ${city}`);
+console.log(`my skills are ${html} ${css}, and ${one} ${two} ${three}`);
