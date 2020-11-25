@@ -229,3 +229,26 @@ getRepoPromise('https://api.github.com/users/zakariaazaraf/repos').then(
     },
     (error) => console.log(error)
 );
+
+
+/*=========================================================
+=================    Promeses, fetch    ===================
+===========================================================*/
+
+fetch('https://api.github.com/users/zakariaazaraf/repos').then(
+    (data) => {
+        
+        let repos = data.json();
+        
+        return repos;
+}).then(
+    (repos) =>{
+        let newElement = document.createElement('div');
+        let createText = document.createTextNode(`The Number Of Repos is: ${repos.length}`);   
+        newElement.appendChild(createText);
+        document.body.appendChild(newElement);
+        console.log(repos);
+        console.log(typeof repos);
+        return repos;
+    }
+);
